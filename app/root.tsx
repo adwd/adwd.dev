@@ -7,16 +7,17 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import styles from "./global.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "adwd.dev",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <Meta />
         <Links />
@@ -29,4 +30,8 @@ export default function App() {
       </body>
     </html>
   );
+}
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
 }
